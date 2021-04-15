@@ -1,0 +1,14 @@
+#body {
+  margin: 0px;
+  padding: 0px;
+}
+#tot {
+  height: 0%;
+  width: 0%;
+  background-color: black;
+}
+#root {
+  margin-left: 0%;
+  padding: 0px;
+  /* background-color: azure; */
+}

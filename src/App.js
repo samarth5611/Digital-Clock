@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
 function App() {
+  let time = new Date().toLocaleTimeString();
+  const [ctime, setCtime] = useState(time);
+
+  const upDateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCtime(time);
+  };
+  setInterval(upDateTime, 1000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="clock">
+      <h1 className="time">{ctime}</h1>
+      {/* <button onClick={upDateTime}> Click Me</button> */}
     </div>
   );
 }
